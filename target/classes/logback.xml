@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%magenta([%thread])  %logger.%M - %cyan(%msg%n)</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="jobsity.bowling" level="debug"/>
+
+
+    <root level="ERROR">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
+
+<!--
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <encoder>
+            <pattern>%blue([%thread])  %logger.%M - %green(%msg%n)</pattern>
+        </encoder>
+    </appender>
+    <appender name="STDERR" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <target>System.err</target>
+        <encoder>
+              <pattern>%red([%thread])  %logger.%M - %red(%msg%n)</pattern>
+        </encoder>
+    </appender>
+    <logger name="jobsity.bowling" level="debug"/>
+    <root>
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="STDERR" />
+    </root>
+</configuration>
+-->
